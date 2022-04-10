@@ -1,5 +1,5 @@
 # C++ Exercises
-- This content includes array/matrix exercises for C++
+- This content includes array/matrix/loops/conditional-statements/methods/algorithm exercises for C++
 - All the codes written by xaprier.
 
 Social Media Accounts
