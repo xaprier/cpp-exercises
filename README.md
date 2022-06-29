@@ -108,4 +108,4 @@ Contents
 - [squareWithArea.cpp](https://github.com/xaprier/Cxx-Exercises/blob/master/squareWithArea.cpp)
   - Print a square with the area at the middle of square. Will be recode for English.
 - [triangle.cpp](https://github.com/xaprier/Cxx-Exercises/blob/master/triangle.cpp)
-  - Basic triangle pattern. Will be recode for English.
+  - Basic triangle pattern.
