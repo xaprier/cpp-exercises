@@ -3,12 +3,14 @@
 using namespace std;
 
 int main() {
-
-    cout << "Satır sayısı giriniz: ";
-    int satir;
-    cin >> satir;
-    for (int i = 1; i <= satir; i++) {
-        for (int j = 1; j <= satir-i; j++) {
+    /*
+        This code will print a equilateral triangle
+    */
+    cout << "Enter number of line: ";
+    int line;
+    cin >> line;
+    for (int i = 1; i <= line; i++) {
+        for (int j = 1; j <= line - i; j++) {
             cout << " ";
         }
         for (int k = 1; k <= (2 * i - 1); k++) {
@@ -16,5 +18,5 @@ int main() {
         }
         cout << endl;
     }
-    
+    return 0;
 } 
