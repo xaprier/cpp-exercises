@@ -2,43 +2,49 @@
 
 using namespace std;
 
-void sirala(int **ptr, int satir, int sutun);
+void sortMatrix(int **array, int row, int column);
 
 int main() {
     int M, N;
-    cout << "Matrisin satir sayisini giriniz: ";
+    cout << "Enter the row number of matrix: ";
     cin >> M;
-    cout << "Matrisin sutun sayisini giriniz: ";
+    cout << "Enter the column number of matrix: ";
     cin >> N;
+
+    // create a 2d array with dynamic memory allocation
     int **ptr = new int *[M];
     for (int a = 0; a < M; a++)
         ptr[a] = new int[N];
 
-    cout << "Matris elemanlarini satir satir giriniz: " << endl;
+    // input the values of matrix
+    cout << "Enter the values of " << M << "x" << N << " Matrix" << endl;
     for (int b = 0; b < M; b++)
         for (int c = 0; c < N; c++)
             cin >> *(*(ptr + b) + c);
 
-    sirala(ptr, M, N);
+    // call the function
+    sortMatrix(ptr, M, N);
 }
-void sirala(int **ptr, int satir, int sutun) {
+
+void sortMatrix(int **array, int row, int column) {
     int temporary;
-    // tek boyutlu olarak düşünüp hesaplayacağız
-    for (int i = 0; i < satir * sutun - 1; i++) {
-        for (int j = 0; j < satir * sutun - 1 - i; j++) {
-            // satir = j/sutun
-            // sutun = j%sutun
-            if (*(*(ptr + j / sutun) + j % sutun) > *(*(ptr + (j + 1) / sutun) + (j + 1) % sutun)) {
-                temporary = *(*(ptr + (j + 1) / sutun) + (j + 1) % sutun);
-                *(*(ptr + (j + 1) / sutun) + (j + 1) % sutun) = *(*(ptr + j / sutun) + j % sutun);
-                *(*(ptr + j / sutun) + j % sutun) = temporary;
+    // we will think the array as 1d array in the loop and sort with temporary variable
+    for (int i = 0; i < row * column - 1; i++) {
+        for (int j = 0; j < row * column - 1 - i; j++) {
+            // row = j/column
+            // column = j%column
+            if (*(*(ptr + j / column) + j % column) > *(*(ptr + (j + 1) / column) + (j + 1) % column)) {
+                temporary = *(*(ptr + (j + 1) / column) + (j + 1) % column);
+                *(*(ptr + (j + 1) / column) + (j + 1) % column) = *(*(ptr + j / column) + j % column);
+                *(*(ptr + j / column) + j % column) = temporary;
             }
         }
     }
-    cout << "Butun dizinin buyukten kucuge siralanmis matris hali su sekildedir:" << endl;
-    for (int sayi1 = 0; sayi1 < satir; sayi1++) {
-        for (int sayi2 = 0; sayi2 < sutun; sayi2++) {
-            cout << *(*(ptr + sayi1) + sayi2) << " ";
+
+    cout << "The order of the matrix from largest to smallest is as follows:" << endl;
+    for (int r = 0; r < satir; r++) {
+        for (int c = 0; c < sutun; c++) {
+            cout << *(*(ptr + r) + c) << " ";
         }
         cout << endl;
     }

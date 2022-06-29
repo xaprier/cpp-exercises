@@ -1,15 +1,16 @@
 # C++ Exercises
+
 - This content includes array/matrix/loops/conditional-statements/methods/algorithm exercises for C++
 - All the codes written by xaprier.
 
-Social Media Accounts
-=============
-- [![Instagram](https://github.com/hussainweb/hussainweb/blob/main/icons/instagram.png)](http://instagram.com/xaprier) 
+# Social Media Accounts
+
+- [![Instagram](https://github.com/hussainweb/hussainweb/blob/main/icons/instagram.png)](http://instagram.com/xaprier)
 - [![Github](https://www.vectorlogo.zone/logos/github/github-ar21.svg)](http://github.com/xaprier)
 - [![LinkedIn](https://github.com/hussainweb/hussainweb/blob/main/icons/linkedin.png)](https://www.linkedin.com/in/seymen-kalkan-819b01220/)
 
-Contents
-=============
+# Contents
+
 - [Arrays](https://github.com/xaprier/Cxx-Exercises/tree/master/Arrays)
   - [Ex1a.cpp](https://github.com/xaprier/Cxx-Exercises/blob/master/Arrays/Ex1a.cpp)
     - Write a program in C++ to store elements and print it.
@@ -90,17 +91,17 @@ Contents
 - [findPrimeNumbers1.cpp](https://github.com/xaprier/Cxx-Exercises/blob/master/findPrimeNumbers1.cpp)
   - Find the prime numbers between 1 and n, display and count it.
 - [findPrimeNumbers2.cpp](https://github.com/xaprier/Cxx-Exercises/blob/master/findPrimeNumbers2.cpp)
-  - Find the prime numbers between 1 and n, display and count it. Another solution. Will be recode for English.
+  - Find the prime numbers between 1 and n, display and count it. Another solution.
 - [matrixCalculator.cpp](https://github.com/xaprier/Cxx-Exercises/blob/master/matrixCalculator.cpp)
   - Matrix Calculator with the rules. Will be recode for English
 - [matrixColumAndRowAndDiagonalAddition.cpp](https://github.com/xaprier/Cxx-Exercises/blob/master/matrixColumAndRowAndDiagonalAddition.cpp)
-  - Addition each row, column and addition of diagonal for matrix. Will be recode for English
+  - Addition each row, column and addition of diagonal for matrix.
 - [numberBaseConverter.cpp](https://github.com/xaprier/Cxx-Exercises/blob/master/numberBaseConverter.cpp)
   - Number base converter for each convert. Will be recode for English(if im not lazy (:)
 - [seperateOddsAndEvens.cpp](https://github.com/xaprier/Cxx-Exercises/blob/master/seperateOddsAndEvens.cpp)
   - Seperate odds and evens to another array from given array.
 - [sortMatrix.cpp](https://github.com/xaprier/Cxx-Exercises/blob/master/sortMatrix.cpp)
-  - Sort the matrix column and row wised. Will be recode for English.
+  - Sort the matrix column and row wised.
 - [sortMatrixColumns.cpp](https://github.com/xaprier/Cxx-Exercises/blob/master/sortMatrixColumns.cpp)
   - Sort the matrix column wised. Will be recode for English.
 - [sortMatrixRows.cpp](https://github.com/xaprier/Cxx-Exercises/blob/master/sortMatrixRows.cpp)
