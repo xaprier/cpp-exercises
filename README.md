@@ -107,6 +107,6 @@
 - [sortMatrixRows.cpp](https://github.com/xaprier/Cxx-Exercises/blob/master/sortMatrixRows.cpp)
   - Sort the matrix row wised. Will be recode for English.
 - [squareWithArea.cpp](https://github.com/xaprier/Cxx-Exercises/blob/master/squareWithArea.cpp)
-  - Print a square with the area at the middle of square. Will be recode for English.
+  - Print a square with the area at the middle of square.
 - [triangle.cpp](https://github.com/xaprier/Cxx-Exercises/blob/master/triangle.cpp)
   - Basic triangle pattern.
