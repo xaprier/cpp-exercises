@@ -33,18 +33,18 @@ void sortMatrix(int **array, int row, int column) {
         for (int j = 0; j < row * column - 1 - i; j++) {
             // row = j/column
             // column = j%column
-            if (*(*(ptr + j / column) + j % column) > *(*(ptr + (j + 1) / column) + (j + 1) % column)) {
-                temporary = *(*(ptr + (j + 1) / column) + (j + 1) % column);
-                *(*(ptr + (j + 1) / column) + (j + 1) % column) = *(*(ptr + j / column) + j % column);
-                *(*(ptr + j / column) + j % column) = temporary;
+            if (*(*(array + j / column) + j % column) > *(*(array + (j + 1) / column) + (j + 1) % column)) {
+                temporary = *(*(array + (j + 1) / column) + (j + 1) % column);
+                *(*(array + (j + 1) / column) + (j + 1) % column) = *(*(array + j / column) + j % column);
+                *(*(array + j / column) + j % column) = temporary;
             }
         }
     }
 
     cout << "The order of the matrix from largest to smallest is as follows:" << endl;
-    for (int r = 0; r < satir; r++) {
-        for (int c = 0; c < sutun; c++) {
-            cout << *(*(ptr + r) + c) << " ";
+    for (int r = 0; r < row; r++) {
+        for (int c = 0; c < column; c++) {
+            cout << *(*(array + r) + c) << " ";
         }
         cout << endl;
     }
