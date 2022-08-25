@@ -2,43 +2,43 @@
 
 using namespace std;
 
-void sirala(int **ptr, int satir, int sutun);
+void sortTheRows(int **arr, int rows, int columns);
 
 int main() {
-    int M, N;
-    cout << "Matrisin satir sayisini giriniz: ";
-    cin >> M;
-    cout << "Matrisin sutun sayisini giriniz: ";
-    cin >> N;
-    int **ptr = new int *[M];
-    for (int a = 0; a < M; a++)
-        ptr[a] = new int[N];
+	int M, N;
+	cout << "Enter row number of matrix: ";
+	cin >> M;
+	cout << "Enter column number of matrix: ";
+	cin >> N;
+	int **arr = new int *[M];
+	for (int i = 0; i < M; i++)
+		arr[i] = new int[N];
 
-    cout << "Matris elemanlarini satir satir giriniz: " << endl;
-    for (int b = 0; b < M; b++)
-        for (int c = 0; c < N; c++)
-            cin >> *(*(ptr + b) + c);
+    cout << "Enter the matrix members row by row: " << endl;
+    for (int i = 0; i < M; i++)
+        for (int j = 0; j < N; j++)
+            cin >> *(*(arr + i) + j);
 
-    sirala(ptr, M, N);
+	sortTheRows(arr, M, N);
 }
-void sirala(int **ptr, int satir, int sutun) {
+void sortTheRows(int **arr, int rows, int columns) {
     int temporary;
-    for (int i = 0; i < sutun; i++) {                  // 0 1 2 3
-        for (int j = 0; j < satir; j++) {              // 0 1 2
-            for (int k = 0; k < satir - j - 1; k++) {  //
-                if (*(*(ptr + k) + i) < *(*(ptr + (k + 1)) + i)) {
-                    temporary = *(*(ptr + (k + 1)) + i);
-                    *(*(ptr + (k + 1)) + i) = *(*(ptr + k) + i);
-                    *(*(ptr + k) + i) = temporary;
+    for (int k = 0; k < rows; k++) {
+        for (int i = 0; i < columns; i++) {
+            for (int j = 0; j < columns - 1 - i; j++) {
+                if (arr[k][j] > arr[k][j + 1]) {
+                    temporary = arr[k][j + 1];
+                    arr[k][j + 1] = arr[k][j];
+                    arr[k][j] = temporary;
                 }
             }
         }
     }
-    cout << "Sutunlari kucukten buyuge siralanmis matris su sekildedir:" << endl;
-    for (int sayi1 = 0; sayi1 < satir; sayi1++) {
-        for (int sayi2 = 0; sayi2 < sutun; sayi2++) {
-            cout << *(*(ptr + sayi1) + sayi2) << " ";
-        }
-        cout << endl;
-    }
+	cout << "The matrix with sorted rows:" << endl;
+	for (int i = 0; i < rows; i++) {
+		for (int j = 0; j < columns; j++) {
+			cout << *(*(arr + i) + j) << " ";
+		}
+		cout << endl;
+	}
 }
