@@ -2,49 +2,51 @@
 
 using namespace std;
 
-int **matrisTranspoz(int **dizi, int a) {
-    int **dizi2 = new int *[a];
+int **transpose(int **array, int a) {
+    int **array2 = new int *[a];
     for (int r1 = 0; r1 < a; r1++) {
-        *(dizi2 + r1) = new int[a];
+        *(array2 + r1) = new int[a];
     }
     for (int i = 0; i < a; ++i) {
         for (int j = 0; j < a; ++j) {
-            *(*(dizi2 + j) + i) = *(*(dizi + i) + j);
+            *(*(array2 + j) + i) = *(*(array + i) + j);
         }
     }
-    return dizi2;
+    return array2;
 }
 
-void matrisAl(int **dizi, int a) {
+void inputMatrix(int **array, int a) {
     for (int i = 0; i < a; i++) {
         for (int j = 0; j < a; j++) {
-            cout << "dizinin " << i << " " << j << " indisinin değerini giriniz: ";
-            cin >> *(*(dizi + i) + j);
-            //*(*(dizi + i) + j) = rand() % 9 + 1;
+            cout << "Enter the " << i + 1 << ", " << j + 1 << " index of matrix: ";
+            cin >> *(*(array + i) + j);
+            //*(*(array + i) + j) = rand() % 9 + 1;
         }
     }
 }
 
-void matrisBastir(int **dizi, int a) {
+void printMatrix(int **array, int a) {
     for (int i = 0; i < a; i++) {
         for (int j = 0; j < a; j++) {
-            cout << *(*(dizi + i) + j) << " ";
+            cout << *(*(array + i) + j) << " ";
         }
         cout << endl;
     }
 }
 
 int main() {
-    cout << "Kare matris boyutunu giriniz: ";
-    int boyut;
-    cin >> boyut;
-    int **dizi = new int *[boyut];
-    for (int i = 0; i < boyut; i++) {
-        dizi[i] = new int[boyut];
+    cout << "Enter the size of square matrix: ";
+    int size;
+    cin >> size;
+    int **array = new int *[size];
+    for (int i = 0; i < size; i++) {
+        array[i] = new int[size];
     }
-    matrisAl(dizi, boyut);
-    matrisBastir(dizi, boyut);
+    inputMatrix(array, size);
+	cout << "Entered Matrix" << endl;
+    printMatrix(array, size);
     cout << endl;
-    dizi = matrisTranspoz(dizi, boyut);
-    matrisBastir(dizi, boyut);
+    array = transpose(array, size);
+	cout << "Transposed Matrix" << endl;
+    printMatrix(array, size);
 }
