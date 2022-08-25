@@ -3,7 +3,7 @@
 using namespace std;
 
 bool inline even(int number) {
-    return number % 2 == 0 ? true : false;
+    return number % 2 == 0;
 }
 
 void inputArray(int size, int *array, int &evens, int &odds) {
@@ -17,18 +17,12 @@ void inputArray(int size, int *array, int &evens, int &odds) {
     }
 }
 
-void writer(int *array, int size) {
-    for (int i = 0; i < size; i++)
-        cout << array[i] << " ";
-    cout << endl;
-}
-
 int main() {
     // creating variables and arrays
     int size, counter, evens = 0, odds = 0;
     cout << "Enter size of array: ";
     cin >> size;
-    int *array = new int[size], *countarray = new int[size];
+    int *array = new int[size];
 
     // input function and return
     inputArray(size, array, evens, odds);
