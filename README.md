@@ -101,9 +101,9 @@
 - [sortMatrix.cpp](https://github.com/xaprier/Cxx-Exercises/blob/master/sortMatrix.cpp)
   - Sort the matrix column and row wised.
 - [sortMatrixColumns.cpp](https://github.com/xaprier/Cxx-Exercises/blob/master/sortMatrixColumns.cpp)
-  - Sort the matrix column wised. Will be recode for English.
+  - Sort the matrix column wised.
 - [sortMatrixRows.cpp](https://github.com/xaprier/Cxx-Exercises/blob/master/sortMatrixRows.cpp)
-  - Sort the matrix row wised. Will be recode for English.
+  - Sort the matrix row wised.
 - [squareWithArea.cpp](https://github.com/xaprier/Cxx-Exercises/blob/master/squareWithArea.cpp)
   - Print a square with the area at the middle of square.
 - [triangle.cpp](https://github.com/xaprier/Cxx-Exercises/blob/master/triangle.cpp)
