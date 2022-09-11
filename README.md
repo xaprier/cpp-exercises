@@ -79,11 +79,11 @@
 - [arrayFindRepeat.cpp](https://github.com/xaprier/Cxx-Exercises/blob/master/arrayFindRepeat.cpp)
   - Find the repeat count in array.
 - [arrayTranspose.cpp](https://github.com/xaprier/Cxx-Exercises/blob/master/arrayTranspose.cpp)
-  - Will be recode.
+  - Find and write the transpose of a matrix.
 - [calculator.cpp](https://github.com/xaprier/Cxx-Exercises/blob/master/calculator.cpp)
-  - Will be recode.
+  - Basic calculator.
 - [calculatorWithPointers.cpp](https://github.com/xaprier/Cxx-Exercises/blob/master/calculatorWithPointers.cpp)
-  - Will be recode.
+  - Basic calculator which includes Pointer Arithmetic and print all done operations after complete.
 - [findLocationOfMaximumElement.cpp](https://github.com/xaprier/Cxx-Exercises/blob/master/findLocationOfMaximumElement.cpp)
   - Find the maximum value and tell us the location/locations of element in matrix.
 - [findPrimeNumbers1.cpp](https://github.com/xaprier/Cxx-Exercises/blob/master/findPrimeNumbers1.cpp)
