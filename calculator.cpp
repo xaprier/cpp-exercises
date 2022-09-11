@@ -1,77 +1,68 @@
-#include <clocale>
 #include <cmath>
 #include <iostream>
-using namespace std;
-int faktoriyel(int a) {
-    return (a <= 1 && a >= 0) ? 1 : a * faktoriyel(a - 1);
-}
-int main() {
-    system("color a");
 
-    long double sonuc = 0;
-    double sayi1, sayi2;
-    char islem;
-    cout << "Sayi giriniz: ";
-    cin >> sayi1;
+using namespace std;
+
+int factorial(int a) {
+    return (a <= 1 && a >= 0) ? 1 : a * factorial(a - 1);
+}
+
+int main() {
+    long double result = 0;
+    double num1, num2;
+    char operation;
+    cout << "Enter number: ";
+    cin >> num1;
     while (true) {
-        cout << "Islemi belirtiniz. Mevcut islemler - + * / ! % =" << endl;
-        cin >> islem;
-        system("cls");
-        if (islem == '=') {
+        cout << "Choose your operation. Current operations are - + * / ! % =" << endl;
+        cin >> operation;
+        if (operation == '=') {
             break;
         }
-        switch (islem) {
+        switch (operation) {
             case '-':
-                cout << "Sayi giriniz: ";
-                cin >> sayi2;
-                sonuc = sayi1 - sayi2;
-                system("cls");
-                cout << sayi1 << " - " << sayi2 << " = " << sonuc << endl;
+                cout << "Enter number: ";
+                cin >> num2;
+                result = num1 - num2;
+                cout << num1 << " - " << num2 << " = " << result << endl;
                 break;
             case '+':
-                cout << "Sayi giriniz: ";
-                cin >> sayi2;
-                sonuc = sayi1 + sayi2;
-                system("cls");
-                cout << sayi1 << " + " << sayi2 << " = " << sonuc << endl;
+                cout << "Enter number: ";
+                cin >> num2;
+                result = num1 + num2;
+                cout << num1 << " + " << num2 << " = " << result << endl;
                 break;
             case '*':
-                cout << "Sayi giriniz: ";
-                cin >> sayi2;
-                sonuc = sayi1 * sayi2;
-                system("cls");
-                cout << sayi1 << " * " << sayi2 << " = " << sonuc << endl;
+                cout << "Enter number: ";
+                cin >> num2;
+                result = num1 * num2;
+                cout << num1 << " * " << num2 << " = " << result << endl;
                 break;
             case '/':
-                cout << "Sayi giriniz: ";
-                cin >> sayi2;
-                sonuc = (double)sayi1 / sayi2;
-                system("cls");
-                cout << sayi1 << " / " << sayi2 << " = " << sonuc << endl;
+                cout << "Enter number: ";
+                cin >> num2;
+                result = (double)num1 / num2;
+                cout << num1 << " / " << num2 << " = " << result << endl;
                 break;
             case '!':
-                sonuc = faktoriyel(sayi1);
-                system("cls");
-                cout << sayi1 << "! = " << sonuc << endl;
+                result = factorial(num1);
+                cout << num1 << "! = " << result << endl;
                 break;
             case '%':
-                cout << "Sayi giriniz: ";
-                cin >> sayi2;
-                sonuc = fmod(sayi1, sayi2);
-                system("cls");
-                cout << sayi1 << " % " << sayi2 << " = " << sonuc << endl;
+                cout << "Enter number: ";
+                cin >> num2;
+                result = fmod(num1, num2);
+                cout << num1 << " % " << num2 << " = " << result << endl;
                 break;
             case '=':
-                system("cls");
-                cout << "Islem sonlandiriliyor.." << endl;
+                cout << "Operation terminating.." << endl;
                 break;
             default:
-                system("cls");
-                cout << "Boyle bir islem bulunamadi tekrar deneyin." << endl;
+                cout << "There is no operation like you specified." << endl;
                 break;
         }
-        sayi1 = sonuc;
-        sonuc = 0;
+        num1 = result;
+        result = 0;
     }
-    cout << "Son sonuc = " << sayi1;
+    cout << "Last result = " << num1;
 }
