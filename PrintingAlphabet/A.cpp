@@ -3,36 +3,42 @@
 using namespace std;
 
 int main() {
-    system("chcp 65001 > nul"); //VSCode ve CLion için Türkçe karakterlerin çalışması için çalıştırılan komut
-    
-    cout << "5 veya 5'ten büyük tek sayı giriniz: "; //Bazı harfler tek sayı olduğunda orantılı olarak çizildiğinden dolaylı tek sayı istiyoruz.
-    
-    int sayi; //Harfimizin büyüklüğü için sayı değişkenini kullanıcıdan alıyoruz
-    cin >> sayi;
-    
-    if (sayi <= 4 || sayi % 2 == 0) { //Girilen sayı verdiğimiz koşulları sağlıyor mu kontrolü
-        cout << "Girilen sayı 5 veya 5'ten büyük tek sayı olmalıdır.";
-    } else {
-        for (int a = 1; a <= sayi; a++) { //Her satır için for döngüsü. Yani a değişkenimiz satır numarasını ifade ediyor.
-            if (a == 1) { //Satırımız 1 ise
-                cout << " "; //1 boşluk bırak
-                for (int a1 = 1; a1 <= 2 * sayi - 2; a1++) { //2*sayi-2 tane yan yana A bastırsın. if koşulu gerçekleştiğinden diğer koşullara bakılmadan 34.satıra geçilir ve döngü bir sonraki aşamaya geçer
-                    cout << "A";
-                }
-            } else if (a == (sayi / 2) + 1) { //Satırımız tam orta satır ise.
-                for (int a2 = 1; a2 <= 2 * sayi; a2++) { //2*sayi tane yan yana A bastırsın. else if koşulu gerçekleştiğinden diğer koşullara bakılmadan 34.satıra geçilir ve döngü bir sonraki aşamaya geçer
-                    cout << "A";
-                }
-            } else { //Yukardaki koşullar sağlanmıyor ise.
-                for (int a3 = 1; a3 <= 2 * sayi - 1; a3++) { //1'den, 2*sayi - 1'e kadar sütun döngüsü
-                    if (a3 == 1 || a3 == 2 * sayi - 1) { //eğer sütun "1" veya "2*sayi-1" sütunu ise A bas, değilse 1 boşluk bas.
-                        cout << "A";
-                    }
-                    cout << " ";
-                }
-            }
-            cout << endl; //satırı bitir
-        }
-    }
-    system("pause>0");
+	a:
+	// We want an odd number because some letters are drawn proportionally only when they are odd numbers.
+	cout << "Enter an odd number which 5 or higher value: ";
+
+	int number; // input the length of alphabet from user
+	cin >> number;
+
+	if (number <= 4 || number % 2 == 0) { // if the number includes the conditions of program or not?
+		cout << "You must enter an odd number which 5 or higher value." << endl;
+		goto a;
+	} else {
+		// A for loop which is for every line. So variable a means the line.
+		for (int a = 1; a <= number; a++) {
+			if (a == 1) { // if the line is 1
+				cout << " "; // print a whitespace then
+				// Let 2*number-2 print A side by side.
+				for (int a1 = 1; a1 <= 2 * number - 2; a1++) {
+					cout << "A";
+				}
+			} else if (a == (number / 2) + 1) { // if the line is a middle line
+				// Let 2*number print A side by side.
+				for (int a2 = 1; a2 <= 2 * number; a2++) {
+					cout << "A";
+				}
+			} else { // if the above conditions are not met
+				// A column loop which start with 1 to 2*number-1
+				for (int a3 = 1; a3 <= 2 * number - 1; a3++) {
+					// print A if the columns is 1 or end of column(2*number-1)
+					// if not print 1 whitespace
+					if (a3 == 1 || a3 == 2 * number - 1) {
+						cout << "A";
+					}
+					cout << " ";
+				}
+			}
+			cout << endl;
+		}
+	}
 }
